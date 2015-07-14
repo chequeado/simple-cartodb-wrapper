@@ -1,0 +1,19 @@
+html,body{
+	height: 100%;
+	width: 100%;
+}
+#chequeado-map{
+	height: 100%;
+	width: 100%;
+}
+
+#button-container{
+	position: absolute;
+	z-index: 1000;
+	left: 85px;
+	bottom: 10px;
+}
+
+#credits {
+	z-index: 999999;
+}

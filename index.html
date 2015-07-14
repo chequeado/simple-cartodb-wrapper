@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chequeado</title>
+
+    <!-- Bootstrap -->
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.14/themes/css/cartodb.css" />
+  <link href="bower_components/leaflet/dist/leaflet.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+    <div id="button-container">
+      <button class="btn btn-xs btn-default" data-toggle="modal" data-target="#credits"><i class="glyphicon glyphicon-info-sign"></i></button>    
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="credits" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <p>Herramientas:</p>
+            <ul>
+              <li><a href="https://jquery.com/" target="_blank">jQuery</a></li>
+              <li><a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a></li>
+              <li><a href="http://docs.cartodb.com/cartodb-platform/cartodb-js.html" target="_blank">CartoDB.js</a></li>
+            </ul>
+            <p>Construido para <a href="http://twitter.com/chequeado" target="_blank">@chequeado</a> por <a href="http://twitter.com/palamago" target="_blank">@palamago</a></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="chequeado-map"></div>
+    <div id='menu'>
+    </div>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/leaflet/dist/leaflet.js"></script>
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.14/cartodb.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+      window.onload = function() {
+          Chequeado.init(Chequeado.getParam('mapID'));
+      }
+    </script>
+
+  </body>
+</html>
