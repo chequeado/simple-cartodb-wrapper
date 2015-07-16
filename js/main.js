@@ -59,11 +59,12 @@ var Chequeado;
         $('#test').on('click',function(){
             var sheet = $('#sheet').val();
             var id = $('#id').val();
+            var height = $('#height').val();
 
             if(sheet && id){
                 var url = location.origin + location.pathname + 'viz.html?key='+sheet+'&ID='+id;
-                $('iframe').attr('src',url);
-                $('textarea').html('<iframe src="'+url+'" frameborder="0" height="500" width="100%"></iframe>');
+                $('iframe').attr('src',url).attr('height',height);
+                $('textarea').html('<iframe src="'+url+'" frameborder="0" height="'+height+'" width="100%"></iframe>');
             }
         });
     };
