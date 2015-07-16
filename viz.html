@@ -20,63 +20,45 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
-
-    <div class="container">
-      
-      <h1>Simple CartoDB Wraper</h1>
-
-      <h2>Datos</h2>
-
-      <div class="row">
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Id del google spreadsheet</label>
-            <input type="text" class="form-control" id="sheet" placeholder="Ej: 1LvD5AdQaO2EcsNelWJY3T7q7gyaHTwJjaZmKcaDD9yQ">
-            <span class="help-block small">Ej: 1LvD5AdQaO2EcsNelWJY3T7q7gyaHTwJjaZmKcaDD9yQ</span>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Identificador del registro</label>
-            <input type="text" class="form-control" id="id" placeholder="Ej: 1">
-            <span class="help-block small">Ej: 1</span>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <a id="test" class="btn btn-primary">Test</a>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
+  <body id="viz">
     
-          <h2>Demo</h2>
-
-          <iframe src="" width="100%" height="500" frameborder="0"></iframe>
-
-        </div>
-        <div class="col-md-6">
-
-          <h2>Iframe / embed</h2>
-          <textarea class="form-control"></textarea>
-          
-        </div>
-      </div>
-
+    <div id="button-container">
+      <button class="btn btn-xs btn-default" data-toggle="modal" data-target="#credits"><i class="glyphicon glyphicon-info-sign"></i></button>    
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="credits" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img class="pull-right" src="img/logo.jpeg" width="100" />
+            <p>Periodista: <strong data-bind="periodista"></strong> <strong>| Chequeado</strong></p>
+            <p>Fuente: <strong data-bind="fuente"></strong></p>
+            <p>Visualización: <strong data-bind="developer"></strong></p>
+            <p>Herramientas: <strong data-bind="herramientas"></strong></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default btn-xs" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="chequeado-map"></div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/leaflet/dist/leaflet.js"></script>
     <script src="http://libs.cartocdn.com/cartodb.js/v3/3.14/cartodb.js"></script>
+    <script src="bower_components/transparency/dist/transparency.min.js"></script>
+    <script src="bower_components/tabletop/src/tabletop.js"></script>
 
     <script src="js/main.js"></script>
 
     <script type="text/javascript">
       window.onload = function() {
-          Chequeado.initGenerador();
+          Chequeado.init();
       }
     </script>
 

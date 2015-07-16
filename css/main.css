@@ -1,6 +1,9 @@
-html,body{
+html,body#viz{
 	height: 100%;
 	width: 100%;
+	background-image:url('../img/logo.jpeg');
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 #chequeado-map{
 	height: 100%;
@@ -16,4 +19,8 @@ html,body{
 
 #credits {
 	z-index: 999999;
+}
+
+textarea {
+	height: 500px !important;
 }
