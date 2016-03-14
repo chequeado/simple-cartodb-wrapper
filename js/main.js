@@ -43,6 +43,9 @@ var Chequeado;
         Chequeado.data = Chequeado.data[0];
         Chequeado.startMap(Chequeado.data.mapID);
         $('.modal').render(Chequeado.data);
+        $('#loader-container').hide();
+        $('#button-container').show();
+
     }
 
     Chequeado.startMap = function(cartoId){

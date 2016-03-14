@@ -11,10 +11,21 @@ html,body#viz{
 }
 
 #button-container{
+	display: none;
 	position: absolute;
 	z-index: 1000;
 	left: 85px;
 	bottom: 10px;
+}
+
+#loader-container{
+	position: absolute;
+	z-index: 1000;
+	left: 0;
+	bottom: 50px;
+	display: block;
+	text-align: center;
+	width: 100%;
 }
 
 #credits {
